@@ -43,13 +43,13 @@ list_of_files=[
 ]
 
 for filepath in list_of_files:
-    filepath=Path(filepath)
+    filepath=Path(filepath)# find info about type of os
     filedir,filename=os.path.split(filepath)#seperate folder and file
 
     if filedir != "":
-        os.makedirs(filedir,exist_ok=True)
+        os.makedirs(filedir,exist_ok=True)#create folder
     if (not os.path.exists(filepath)) or(os.path.getsize(filepath)) :
-        with open(filepath,"w") as f:
+        with open(filepath,"w") as f: #create file inside folder
             pass 
     else:
         print(f"{filepath} already exists")     
