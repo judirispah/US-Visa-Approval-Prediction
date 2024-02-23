@@ -7,3 +7,6 @@ setup(
     author_email="judi.rispah.123@gmail.com",
     packages=find_packages()
 )
+
+#It is helpful for considering us_visa as local package
+#for runing requirements.txt
