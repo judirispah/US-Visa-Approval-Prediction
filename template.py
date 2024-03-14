@@ -43,7 +43,7 @@ list_of_files=[
 ]
 
 for filepath in list_of_files:
-    filepath=Path(filepath)# find info about type of os
+    filepath=Path(filepath)# find info about type of os for ///\\\\
     filedir,filename=os.path.split(filepath)#seperate folder and file
 
     if filedir != "":

@@ -1,0 +1,11 @@
+.centered-tile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background-color: #f0f0f0; /* Example background color */
+    border: 2px solid #333; /* Example border */
+    border-radius: 10px; /* Example border radius */
+  }

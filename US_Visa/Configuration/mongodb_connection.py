@@ -3,7 +3,7 @@ from us_visa.Exception import USvisaException
 from us_visa.logger import logging
 import pymongo
 import os
-from us_visa.Constants import DATABASE_NAME,MONGODB_URL
+from us_visa.Constants import DATABASE_NAME,MONGODB_URL_KEY
 
 
 
@@ -14,7 +14,7 @@ class MongoDBClient:
     def __init__(self,database_name=DATABASE_NAME):
         try:
             if MongoDBClient.client is None:
-                mongo_db_url=os.getenv(MONGODB_URL)
+                mongo_db_url=os.getenv(MONGODB_URL_KEY)
                 if mongo_db_url is None:
                     raise Exception(f"enivornment key is not set or does not exist{MONGODB_URL}")
                 
