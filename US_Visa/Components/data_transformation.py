@@ -2,7 +2,7 @@ import sys
 
 import numpy as np
 import pandas as pd
-from imblearn.combine import SMOTEENN
+from imblearn.over_sampling import SMOTEN
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder, PowerTransformer
 from sklearn.compose import ColumnTransformer
@@ -161,7 +161,7 @@ class DataTransformation:
 
                 logging.info("Applying SMOTEENN on Training dataset")
 
-                smt = SMOTEENN(sampling_strategy="minority")
+                smt = SMOTEN(sampling_strategy="minority")
 
                 input_feature_train_final, target_feature_train_final = smt.fit_resample(
                     input_feature_train_arr, target_feature_train_df

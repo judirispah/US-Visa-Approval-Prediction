@@ -81,7 +81,7 @@ class ModelTrainer:
             logging.info("Created usvisa model object with preprocessor and model")
             logging.info("Created best model file path.")
             
-            save_object(self.model_trainer_config.trained_model_file_path, usvisa_model)
+            save_object(self.model_trainer_config.trained_model_file_path, best_model_detail.best_model)
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                 metric_artifact=metric_artifact,
